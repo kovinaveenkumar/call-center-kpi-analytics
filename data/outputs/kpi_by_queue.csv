@@ -1,0 +1,4 @@
+queue,offered,answered,abandoned,aht_sec,service_level_pct,abandon_pct,asa_sec,occupancy_pct,shrinkage_pct,adherence_pct
+Billing,75164.0,68114.0,7050.0,420.71,79.72,9.38,35.96,68.09,29.95,89.15
+Orders,87847.0,80532.0,7315.0,299.46,81.92,8.33,22.15,66.99,30.06,89.06
+Tech,55978.0,50577.0,5401.0,639.16,78.77,9.65,48.29,68.87,30.15,88.99
