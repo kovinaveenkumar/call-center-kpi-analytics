@@ -2,6 +2,11 @@
 
 Interval-level contact-center reporting: the standard workforce-management (WFM) KPIs in SQL + Python, output as Tableau-ready CSVs.
 
+> **Tableau Public dashboard:** [Call Center KPI Dashboard](https://public.tableau.com/app/profile/naveen.k7476/viz/CallCenterKPIDashboard_17913996371520/Dashboard1) (KPI tiles, queue service level vs the 80/20 target, intraday service level vs occupancy, daily trend). Build steps: [docs/tableau_guide.md](docs/tableau_guide.md)
+
+[![Call Center KPI Dashboard (Tableau Public)](assets/dashboard.png)](https://public.tableau.com/app/profile/naveen.k7476/viz/CallCenterKPIDashboard_17913996371520/Dashboard1)
+*Built from `data/intervals.csv`. All numbers are from synthetic data.*
+
 ## ⚠ Data is synthetic
 `data/intervals.csv` is **generated** by [`src/call_center_sim.py`](src/call_center_sim.py): 8 weeks × 3 queues (Billing, Tech, Orders) × 30-min intervals, 08:00–20:00. Staffing is sized with the **Erlang C** formula to an 80/20 target and then disturbed by forecast error and varying shrinkage. Volumes, AHTs and shrinkage are my assumptions, so the numbers show the method, not a real operation. The pipeline takes any real dataset with the same columns (see the header of `data/intervals.csv`).
 
@@ -35,4 +40,4 @@ sqlite3 :memory: ".mode csv" ".import data/intervals.csv intervals" ".read sql/k
 Then connect Tableau to `data/outputs/*.csv`: KPI tiles by queue, an intraday service level vs occupancy line, and a daily trend with the 80% target line.
 
 ## Next
-Tableau Public dashboard (link goes here once published), a real dataset swap-in, and an Erlang C staffing-requirement calculator.
+Swap in a real call center dataset with the same columns, and add an Erlang C staffing-requirement calculator.
