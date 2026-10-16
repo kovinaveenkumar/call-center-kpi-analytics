@@ -3,6 +3,8 @@
 Interval-level contact-center reporting: the standard workforce-management (WFM) KPIs in SQL + Python, output as Tableau-ready CSVs.
 
 > **Tableau Public dashboard:** [Call Center KPI Dashboard](https://public.tableau.com/app/profile/naveen.k7476/viz/CallCenterKPIDashboard_17913996371520/Dashboard1) (KPI tiles, queue service level vs the 80/20 target, intraday service level vs occupancy, daily trend). Build steps: [docs/tableau_guide.md](docs/tableau_guide.md)
+>
+> **Looker Studio (Data Studio) dashboard:** [Call Center KPI Dashboard](https://datastudio.google.com/reporting/92f4edea-1216-47ae-82be-718f07dbc80b) (same KPIs rebuilt from `data/intervals.csv` with calculated fields, service level by 30-minute interval showing the 11:00 dip, queue service level vs the 80% target, daily trend, queue filter).
 
 [![Call Center KPI Dashboard (Tableau Public)](assets/dashboard.png)](https://public.tableau.com/app/profile/naveen.k7476/viz/CallCenterKPIDashboard_17913996371520/Dashboard1)
 *Built from `data/intervals.csv`. All numbers are from synthetic data.*
